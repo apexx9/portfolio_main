@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, Nunito } from "next/font/google";
 import "./globals.css";
 
 /* Components */
@@ -11,6 +11,10 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Portfolio Site",

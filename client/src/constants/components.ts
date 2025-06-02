@@ -1,10 +1,5 @@
 
-/* Hero */
-interface devType{
-    first_name:string;
-    last_name: string;
-    nickname: string;
-}
+import { devType } from "@/interfaces/components"
 
 
 export const DEVELOPER_NAME : devType = {
@@ -12,3 +7,6 @@ export const DEVELOPER_NAME : devType = {
     last_name: "Nartey",
     nickname: "apexx9"
 }
+
+
+export const QUOTES_API_URL : string = "https://api.api-ninjas.com/v1/quotes"

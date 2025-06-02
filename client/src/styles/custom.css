@@ -1,0 +1,17 @@
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+
+  .border-gradient{
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: transparent;
+    border-image: linear-gradient(90deg, rgba(35, 35, 35, 1) 0%, rgba(67, 67, 67, 1) 50%, rgba(35, 35, 35, 1) 100%);
+    border-image-slice: 1;
+  }

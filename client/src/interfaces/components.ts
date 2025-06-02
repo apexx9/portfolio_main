@@ -1,4 +1,4 @@
-import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 /* Button Component */
 export interface ButtonProps {
@@ -17,11 +17,16 @@ export interface NavLink{
 }
 
 /* Socials */
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
-
 export interface Social{
     id: number;
     icon: IconDefinition;
     name: string;
     href?: string;
+}
+
+/* Hero */
+export interface devType{
+    first_name:string;
+    last_name: string;
+    nickname: string;
 }

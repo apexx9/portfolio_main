@@ -1,110 +1,94 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { NavLink, Social } from '@/interfaces/components';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faXTwitter, faGithub, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const NavLinks: NavLink[] = [
-    {
-        id: 1,
-        name: "Home",
-        href: "/"
-    },
-    {
-        id: 2,
-        name: "Education",
-        href: "/education"
-    },
-    {
-        id: 3,
-        name: "Experience",
-        href: "/experience"
-    },
-    {
-        id: 4,
-        name: "Projects",
-        href: "/projects"
-    },
-    {
-        id: 5,
-        name: "Blogs",
-        href: "/blogs"
-    }
-];
-
-const Socials: Social[] = [
-    {
-        id: 1,
-        name: "Gmail",
-        href: "mailto:aaronnartey001@gmail.com",
-        icon: faEnvelope
-    },
-    {
-        id: 2,
-        name: "Github",
-        href: "https://github.com/apexx9",
-        icon: faGithub
-    },
-    {
-        id: 3,
-        name: "Linkedin",
-        href: "https://linkedin.com/in/aaron",
-        icon: faLinkedinIn
-    },
-    {
-        id: 4,
-        name: "Twitter",
-        href: "https://twitter.com/aaron",
-        icon: faXTwitter
-    },
-    {
-        id: 5,
-        name: "Instagram",
-        href: "https://instagram.com/__aaro.nn",
-        icon: faInstagram
-    }
-];
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavLinks, Socials } from '@/libs/url';
+import { usePathname, useRouter } from 'next/navigation';
+import MobileSideBar from './mobileSideBar';
 
 const Header = () => {
-    return (
-        <header className='w-full flex justify-center '>
-            <div className='w-[788px] h-17.5 flex justify-between items-center drop-shadow-lg bg-neutral-800 rounded-[100px] px-8'>
-                <nav className=''>
-                    <ul className='flex items-center gap-8'>
-                        {NavLinks.map((link) => (
-                            <li key={link.id}>
-                                <Link
-                                    href={link.href}
-                                    className='lowercase text-purple-300 text-xl font-medium hover:text-white transition-colors duration-200'
-                                >
-                                    {link.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                
-                <div className='flex items-center gap-4'>
-                    {Socials.map((social) => (
-                        <a
-                            key={social.id}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={social.name}
-                            className='text-purple-300 hover:text-white transition-colors duration-200'
-                        >
-                            {/* Replace with actual icon component or SVG */}
-                            <span className='lowercase'>
-                                <FontAwesomeIcon icon={social.icon} className='w-6 h-6' />
-                            </span>
-                        </a>
-                    ))}
-                </div>
-            </div>
-        </header>
-    );
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setShowMobileMenu(false);
+  }, [pathname]);
+
+  const handleClick = () => {
+    router.push('/');
+  };
+
+  return (
+    <header className="relative w-full flex flex-col lg:flex-row items-center justify-between py-6 px-8 lg:px-20 z-40">
+      {/* Logo - Top center on mobile, left on desktop */}
+      <div className="lg:absolute lg:left-8 lg:top-6 mb-4 lg:mb-0">
+        <h1
+          className="text-purple-300 font-bold text-3xl select-none cursor-pointer"
+          onClick={handleClick}
+        >
+          &lt;<span className="text-white">/</span>apexx9&gt;
+        </h1>
+      </div>
+
+      {/* Desktop Navigation - Centered */}
+      <div className="hidden lg:flex items-center justify-center gap-8 drop-shadow-lg bg-[rgba(33,31,35,0.35)] rounded-full px-8 py-3 backdrop-blur-sm mx-auto">
+        <nav>
+          <ul className="flex items-center gap-8">
+            {NavLinks.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.href}
+                  className="lowercase text-purple-300 text-xl font-medium hover:text-white transition-colors duration-200 relative group"
+                >
+                  {link.name}
+                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-purple-300 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-4">
+          {Socials.map((social) => (
+            <a
+              key={social.id}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.name}
+              className="text-purple-300 hover:text-white transition-colors duration-200"
+            >
+              <FontAwesomeIcon icon={social.icon} className="w-6 h-6" />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Menu Button - Right aligned */}
+      <div className="lg:hidden absolute right-8 top-6">
+        <button 
+          onClick={() => setShowMobileMenu(!showMobileMenu)}
+          className="text-purple-300 hover:text-white transition-colors duration-200 p-2"
+          aria-label="Toggle menu"
+          aria-expanded={showMobileMenu}
+        >
+          <FontAwesomeIcon 
+            icon={faBars} 
+            className="w-6 h-6" 
+          />
+        </button>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <MobileSideBar 
+        isOpen={showMobileMenu} 
+        onClose={() => setShowMobileMenu(false)} 
+      />
+    </header>
+  );
 };
 
 export default Header;

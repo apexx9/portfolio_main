@@ -9,13 +9,20 @@ const Hero = () => {
     <section className='flex justify-between mx-[200px] w-[662px] h-[404px]'>
         <div className='flex flex-col justify-between'>
         <h1 className='font-medium text-7xl'>Hi, I'm <text className='text-purple-300'>{DEVELOPER_NAME["first_name"]}</text></h1>
-        <p className='text-2xl font-extralight w-[662px] h-[192px]'> During these <text className='font-bold text-white'> 2 years </text> as <text className='font-bold text-white'>Full-Stack Software Engineer. </text>
+        <p className='text-2xl font-extralight w-[662px] h-[192px] text-neutral-500'> During these <text className='font-bold text-white'> 2 years </text> as <text className='font-bold text-white'>Full-Stack Software Engineer. </text>
             My role has extended beyond coding to effective communication with various departments,
             to define new features and spearheading the development of new apps.
         </p>
         <div className='flex items-center gap-7'>
             <Button
-            children={"Download CV"}
+            children={
+            <a
+              href="https://drive.google.com/file/d/1TvEO1RRwXqAvMWpAEt_wdWXyHNGZaC4s/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={"my cv url"}
+            >Download CV</a>
+          }
             variant='primary'
             size='medium'
             />
