@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
-import { Icon, IconifyIcon } from '@iconify-icon/react';
+import { Icon } from '@iconify-icon/react';
 import "@/styles/custom.css";
 
 interface StackType {

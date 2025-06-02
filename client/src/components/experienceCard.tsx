@@ -1,6 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const ExperienceCard = ({role, jobType, startDate, endDate, company, location, description }: any) => {
+interface experienceCard{
+  role: string;
+  jobType: string;
+  startDate: string;
+  endDate: string;
+  company: string;
+  location: {
+    city: string;
+    country: string;
+  }
+  description: string;
+}
+
+const ExperienceCard: React.FC<experienceCard>= ({role, jobType, startDate, endDate, company, location, description }) => {
   return (
     <div className='w-full h-[200px] border-gradient rounded-3xl p-6'>
         <div>

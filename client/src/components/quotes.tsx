@@ -19,7 +19,7 @@ const Quotes = () => {
     if (error) {
       return (
         <p className='text-white font-semibold text-xl text-center'>
-          Couldn't load quote. {error}
+          Couldn&apos;t load quote. {error}
         </p>
       );
     }
@@ -27,7 +27,7 @@ const Quotes = () => {
     return (
       <>
         <blockquote className='text-white font-semibold text-xl md:text-2xl text-center'>
-          "{quote}"
+          &quot;{quote}&quot;
         </blockquote>
         {author && (
           <cite className='text-purple-200 text-lg md:text-xl mt-2 block text-center'>
