@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Text Content */}
       <div className='flex flex-col justify-center items-start gap-8 w-full lg:w-1/2 text-center lg:text-left'>
         <h1 className='text-5xl md:text-6xl lg:text-7xl text-[var(--foreground)] leading-tight'>
-          Hi, I'm <span className='text-purple-400'>{DEVELOPER_DETAILS.first_name}</span>
+          Hi, I&apos;m <span className='text-purple-400'>{DEVELOPER_DETAILS.first_name}</span>
         </h1>
         
         <p className='text-lg md:text-xl lg:text-2xl font-normal text-gray-400 leading-relaxed'>

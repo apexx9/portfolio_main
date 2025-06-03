@@ -83,8 +83,8 @@ const Header = () => {
 
       {/* Mobile Sidebar */}
       <MobileSideBar 
-        isOpen={showMobileMenu} 
-        onClose={() => setShowMobileMenu(false)} 
+        isOpen={showMobileMenu}
+        onClose={() => setShowMobileMenu(false)}
       />
     </header>
   );
