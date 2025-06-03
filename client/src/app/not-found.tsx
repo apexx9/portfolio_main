@@ -14,7 +14,7 @@ const NotFound = () => {
                 <meta name="description" content="The page you're looking for doesn't exist" />
             </Head>
 
-            <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] flex flex-col items-center justify-center px-4 py-12">
+            <div className="min-h-screen bg-[var(--background)] overflow-hidden text-[var(--foreground)] flex flex-col items-center justify-center px-4 py-12">
                 {/* Animated 404 text */}
                 <div className="relative mb-8">
                     <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 animate-pulse">
