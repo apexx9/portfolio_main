@@ -79,7 +79,7 @@ const nunito = Nunito({
 
 const Technologies = () => {
     return (
-    <div className='h-179 flex flex-col justify-between'>
+    <div className='h-179 flex flex-col justify-between overflow-x-hidden'>
         <p className='text-6xl font-normal w-[794px] h-[140px] mx-50 text-gray-300'>These are the Technologies I&apos;ve been using</p>
         <div className='grid grid-cols-5 gap-16 grid-rows-1 justify-evenly mx-17.5 h-106'>
             {

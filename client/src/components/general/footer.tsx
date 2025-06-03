@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return(
-        <footer className='mx-[184px] h-36.5 flex flex-col justify-between'>
+        <footer className='mx-[184px] h-36.5 flex flex-col justify-between overflow-x-hidden'>
             <div className='upper bg-neutral-900 h-22.5 rounded-[100px] flex items-center justify-between px-17.5'>
                 <p className='text-neutral-500 text-[26px]'>Follow me</p>
                 <div className='socials flex items-center gap-4'>
