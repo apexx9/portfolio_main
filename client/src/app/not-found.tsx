@@ -25,7 +25,7 @@ const NotFound = () => {
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Oops! Page Not Found</h2>
                 <p className="text-gray-400 text-lg mb-8 text-center max-w-md">
-                    The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.
+                    The page you&apos;re looking for might have been removed, had its name changed, or is temporarily unavailable.
                 </p>
 
                 {/* Search bar */}
