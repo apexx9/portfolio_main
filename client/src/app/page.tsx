@@ -6,7 +6,7 @@ import Quotes from '@/components/quotes';
 
 const Page = () => {
   return (
-    <div className='page w-full h-full flex flex-col justify-around'>
+    <div className='page w-full max-h-fit flex flex-col justify-around gap-20'>
       <Hero />
       <IntroExperience />
       <Quotes />

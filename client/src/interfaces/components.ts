@@ -25,8 +25,12 @@ export interface Social{
 }
 
 /* Hero */
-export interface devType{
+export interface DeveloperDetails{
     first_name:string;
     last_name: string;
     nickname: string;
+    location: {
+        country: string;
+        city: string;
+    }
 }

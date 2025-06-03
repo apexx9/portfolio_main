@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="relative w-full flex flex-col lg:flex-row items-center justify-between py-6 px-8 lg:px-20 z-40">
       {/* Logo - Top center on mobile, left on desktop */}
-      <div className="lg:absolute lg:left-8 lg:top-6 mb-4 lg:mb-0">
+      <div className="lg:absolute lg:left-8 mb-4 lg:mb-0">
         <h1
           className="text-purple-300 font-bold text-3xl select-none cursor-pointer"
           onClick={handleClick}
@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Desktop Navigation - Centered */}
-      <div className="hidden lg:flex items-center justify-center gap-8 drop-shadow-lg bg-[rgba(33,31,35,0.35)] rounded-full px-8 py-3 backdrop-blur-sm mx-auto">
+      <div className="hidden lg:flex items-center justify-center gap-8 drop-shadow-lg bg-[rgba(33,31,35,0.35)] rounded-full px-8 py-6 backdrop-blur-sm mx-auto">
         <nav>
           <ul className="flex items-center gap-8">
             {NavLinks.map((link) => (
@@ -44,7 +44,6 @@ const Header = () => {
                   className="lowercase text-purple-300 text-xl font-medium hover:text-white transition-colors duration-200 relative group"
                 >
                   {link.name}
-                  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-purple-300 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
             ))}
