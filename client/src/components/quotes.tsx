@@ -9,9 +9,9 @@ const Quotes = () => {
     if (loading) {
       return (
         <div className="flex items-center justify-center space-x-2">
-          <div className="w-4 h-4 rounded-full bg-amber-200 animate-pulse"></div>
-          <div className="w-4 h-4 rounded-full bg-amber-300 animate-pulse delay-75"></div>
-          <div className="w-4 h-4 rounded-full bg-amber-400 animate-pulse delay-150"></div>
+          <div className="w-4 h-4 rounded-full bg-purple-300 animate-pulse"></div>
+          <div className="w-4 h-4 rounded-full bg-purple-500 animate-pulse delay-75"></div>
+          <div className="w-4 h-4 rounded-full bg-purple-700 animate-pulse delay-150"></div>
         </div>
       );
     }

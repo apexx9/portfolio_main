@@ -1,14 +1,15 @@
 import React from 'react';
 import { Socials } from '@/libs/url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "@/styles/custom.css";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return(
-        <footer className='mx-[184px] h-36.5 flex flex-col justify-between overflow-x-hidden'>
-            <div className='upper bg-neutral-900 h-22.5 rounded-[100px] flex items-center justify-between px-17.5'>
-                <p className='text-neutral-500 text-[26px]'>Follow me</p>
-                <div className='socials flex items-center gap-4'>
+        <footer className='lg:mx-[184px] lg:h-36.5 h-28 w-[100vw] px-8.5 lg:w-[calc(100vw-368px)] flex flex-col justify-between overflow-x-hidden gap-4.5'>
+            <div className='upper bg-neutral-900 h-22.5 rounded-[100px] flex items-center justify-between lg:px-17.5 px-5 gap-5'>
+                <p className='text-neutral-500 text-[16px] lg:text-[26px]'>Follow me</p>
+                <div className='socials flex items-center lg:gap-4 gap-2'>
                     {
                         Socials.map((social) => (
                             <a
@@ -28,7 +29,7 @@ const Footer = () => {
                     }
                 </div>
             </div>
-            <div className='lower px-17.5 flex items-center'>
+            <div className='lower lg:px-17.5 px-8.5 flex items-center'>
                &copy; apexx9 {currentYear}
             </div>
         </footer>

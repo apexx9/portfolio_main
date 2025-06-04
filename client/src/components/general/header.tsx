@@ -22,9 +22,9 @@ const Header = () => {
   };
 
   return (
-    <header className="relative w-full flex flex-col lg:flex-row items-center justify-between py-6 px-8 lg:px-20 z-40">
+    <header className="relative w-full flex lg:flex-row items-center justify-between py-6 px-8 lg:px-20 z-40">
       {/* Logo - Top center on mobile, left on desktop */}
-      <div className="lg:absolute lg:left-8 mb-4 lg:mb-0">
+      <div className="lg:absolute lg:left-8 lg:mb-0">
         <h1
           className="text-purple-300 font-bold text-3xl select-none cursor-pointer"
           onClick={handleClick}
@@ -67,7 +67,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Button - Right aligned */}
-      <div className="lg:hidden absolute right-8 top-6">
+      <div className="lg:hidden">
         <button 
           onClick={() => setShowMobileMenu(!showMobileMenu)}
           className="text-purple-300 hover:text-white transition-colors duration-200 p-2"

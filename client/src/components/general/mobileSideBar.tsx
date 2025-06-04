@@ -87,7 +87,7 @@ const MobileSideBar = ({ onClose, isOpen }: MobileSideBarProps) => {
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className='fixed flex flex-col right-0 top-0 w-64 pt-7.5 h-full bg-[var(--background)] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out hidden border-l border-gray-800'
+        className='fixed flex flex-col right-0 top-0 w-64 pt-7.5 h-full bg-[var(--background)] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden border-l border-gray-800'
       >
         {/* Close Button */}
         <button

@@ -35,3 +35,25 @@ body {
   margin-top: 30px;
   margin-bottom: 100px;
 }
+/* globals.css */
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+    margin: 30px auto 100px auto; /* Center the body */
+    padding: 0; /* Remove default padding */
+  }
+
+  /* Optional: Ensure your root container takes full width */
+  #__next {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

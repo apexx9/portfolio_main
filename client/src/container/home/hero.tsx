@@ -56,7 +56,7 @@ const Hero = () => {
       </div>
       
       {/* Profile Image */}
-      <div className='lg:flex flex-1 justify-center items-center w-full lg:w-1/2'>
+      <div className='lg:flex flex flex-1 justify-center items-center w-full lg:w-1/2'>
         <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-400/50 hover:border-purple-400 transition-all duration-500 shadow-lg hover:shadow-purple-500/20'>
           <Image
             src="/profile.jpg" // Replace with your image path
