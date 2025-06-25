@@ -32,5 +32,6 @@ export interface DeveloperDetails{
     location: {
         country: string;
         city: string;
-    }
+    };
+    picture: string;
 }

@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
+
+
 const Hero = () => {
   return (
-    <section className='flex flex-col-reverse lg:flex-row justify-between items-center mx-auto px-6 lg:px-20 w-full max-w-7xl h-auto min-h-[80vh] lg:min-h-[65vh] gap-12 '>
+    <section className='flex flex-col-reverse lg:flex-row justify-between items-center px-6 lg:px-46 w-full max-w-[1800px] mx-auto h-auto min-h-[80vh] lg:min-h-[65vh] gap-12 py-12 lg:py-0'>
       {/* Text Content */}
       <div className='flex flex-col justify-center items-start gap-8 w-full lg:w-1/2 text-center lg:text-left'>
         <h1 className='text-5xl md:text-6xl lg:text-7xl text-[var(--foreground)] leading-tight'>
@@ -23,14 +25,14 @@ const Hero = () => {
         </p>
         
         <div className='flex flex-col gap-6 w-full'>
-          <div className='flex items-center gap-4 text-gray-400'>
+          <div className='flex items-center gap-4 text-gray-400 justify-center lg:justify-start'>
             <FontAwesomeIcon icon={faLocationDot} className='text-purple-400 text-lg' />
             <span className='font-medium text-[var(--foreground)]'>
               {DEVELOPER_DETAILS.location.city}, {DEVELOPER_DETAILS.location.country}
             </span>
           </div>
           
-          <div className='flex flex-wrap flex-col lg:flex-row items-center gap-6'>
+          <div className='flex flex-wrap flex-col lg:flex-row items-center gap-6 justify-center lg:justify-start'>
             <Button
               variant='primary'
               size='medium'
@@ -56,13 +58,13 @@ const Hero = () => {
       </div>
       
       {/* Profile Image */}
-      <div className='lg:flex flex flex-1 justify-center items-center w-full lg:w-1/2'>
+      <div className='flex flex-1 justify-center items-center w-full lg:w-1/2'>
         <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-400/50 hover:border-purple-400 transition-all duration-500 shadow-lg hover:shadow-purple-500/20'>
           <Image
-            src="/profile.jpg" // Replace with your image path
+            src={DEVELOPER_DETAILS.picture}
             alt={`${DEVELOPER_DETAILS.first_name} profile picture`}
             fill
-            className='object-cover hover:scale-105 transition-transform duration-500'
+            className='object-cover hover:scale-105 transition-transform duration-500 rounded-full'
             priority
             quality={100}
           />

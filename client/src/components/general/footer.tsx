@@ -6,7 +6,7 @@ import "@/styles/custom.css";
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return(
-        <footer className='lg:mx-[184px] lg:h-36.5 h-28 w-[100vw] px-8.5 lg:w-[calc(100vw-368px)] flex flex-col justify-between overflow-x-hidden gap-4.5'>
+        <footer className='lg:mx-46 lg:h-36.5 h-28 w-[100vw] px-8.5 lg:w-[calc(100vw-368px)] flex flex-col justify-between overflow-x-hidden gap-4.5'>
             <div className='upper bg-neutral-900 h-22.5 rounded-[100px] flex items-center justify-between lg:px-17.5 px-5 gap-5'>
                 <p className='text-neutral-500 text-[16px] lg:text-[26px]'>Follow me</p>
                 <div className='socials flex items-center lg:gap-4 gap-2'>

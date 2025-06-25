@@ -9,7 +9,8 @@ export const DEVELOPER_DETAILS : DeveloperDetails = {
     location: {
         country: "Ghana",
         city: "Tema"
-    }
+    },
+    picture: "/client/public/assets/my_picture.JPG"
 }
 
 
